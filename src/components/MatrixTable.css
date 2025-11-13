@@ -1,0 +1,200 @@
+.table-wrapper {
+  margin-top: 2rem;
+  background: rgba(15, 23, 42, 0.75);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 18px 40px -22px rgba(15, 23, 42, 0.8);
+  overflow-x: auto;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.table-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.table-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-weight: 500;
+  color: var(--text-muted, #cbd5f5);
+}
+
+.table-actions button {
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(120deg, #22c55e, #4ade80);
+  color: #041b32;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.table-actions button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px -15px rgba(34, 197, 94, 0.7);
+}
+
+.table-actions button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.data-table th,
+.data-table td {
+  padding: 0.65rem 0.75rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.data-table th {
+  font-weight: 600;
+  color: var(--text-muted, #cbd5f5);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.85rem;
+}
+
+.corner-head {
+  text-align: left;
+}
+
+.row-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-weight: 600;
+}
+
+.row-head button {
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  background: rgba(248, 113, 113, 0.2);
+  color: #fecaca;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.row-head button:hover:not(:disabled) {
+  background: rgba(248, 113, 113, 0.35);
+  transform: scale(1.05);
+}
+
+.row-head button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.matrix-cell {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.95rem;
+  background: rgba(15, 23, 42, 0.55);
+  border-radius: 8px;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  min-width: 8ch;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.matrix-cell:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px -24px rgba(96, 165, 250, 0.9);
+}
+
+.matrix-cell--highlighted {
+  outline: 2px solid rgba(96, 165, 250, 0.6);
+  background: rgba(59, 130, 246, 0.18);
+}
+
+.matrix-cell--percent {
+  font-weight: 600;
+  color: #38bdf8;
+}
+
+.sum-head,
+.sum-cell {
+  font-weight: 700;
+  background: rgba(15, 23, 42, 0.7);
+}
+
+.sum-cell {
+  cursor: default;
+}
+
+.sum-cell:hover {
+  background: rgba(56, 189, 248, 0.12);
+}
+
+.percentile-row {
+  font-weight: 600;
+  color: #facc15;
+}
+
+.percentile-row td {
+  background: rgba(250, 204, 21, 0.08);
+}
+
+.muted {
+  color: rgba(148, 163, 184, 0.5);
+}
+
+.empty-state {
+  margin-top: 2.5rem;
+  padding: 2rem;
+  border: 1px dashed rgba(148, 163, 184, 0.4);
+  border-radius: 12px;
+  text-align: center;
+  color: rgba(148, 163, 184, 0.9);
+  display: grid;
+  gap: 1.25rem;
+  justify-items: center;
+}
+
+.empty-state button {
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(120deg, #22c55e, #4ade80);
+  color: #041b32;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.empty-state button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.empty-state button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px -20px rgba(34, 197, 94, 0.8);
+}
+

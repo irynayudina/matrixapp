@@ -1,0 +1,69 @@
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-end;
+  padding: 1.5rem;
+  background-color: var(--surface, #1f2933);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px -12px rgba(15, 23, 42, 0.6);
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 140px;
+}
+
+.control-group label {
+  font-weight: 600;
+  color: var(--text-muted, #cbd5f5);
+}
+
+.control-group input {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  background: rgba(15, 23, 42, 0.8);
+  color: inherit;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.control-group input:focus {
+  outline: none;
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.25);
+}
+
+.controls-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.controls button {
+  border: none;
+  border-radius: 8px;
+  padding: 0.65rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(120deg, #1d4ed8, #3b82f6);
+  color: #f8fafc;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.controls button[type='button'] {
+  background: linear-gradient(120deg, #0ea5e9, #22d3ee);
+}
+
+.controls button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px -12px rgba(96, 165, 250, 0.7);
+}
+
+.controls button:active {
+  transform: translateY(0);
+}
+
